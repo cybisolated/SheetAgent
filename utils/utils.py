@@ -136,8 +136,6 @@ def valid_action(action: str) -> str:
 
 
 def parse_action_input(gpt_msg, action) -> Optional[str]:
-    # if "Action Input:" not in gpt_msg:
-    #     raise FormatMismatchError()
     if action == ACTION.PYTHON_INTERPRETER.value:
         pattern = r"```python(.*?)```"
         matches = re.findall(pattern, gpt_msg, re.DOTALL)
@@ -145,14 +143,10 @@ def parse_action_input(gpt_msg, action) -> Optional[str]:
             raise ActionInputParseError(action)
         return matches[0].strip()
     elif action == ACTION.SHEET_SELECTOR.value:
-        # pattern = r"Action Input: (.+)"
         pattern = r"\bSELECT\b.*?;"
         match = re.search(r"\bSELECT\b.*?;", gpt_msg, re.DOTALL)
-        # pattern = r"@(.+)"
-        # match = re.search(pattern, gpt_msg)
         if not match:
             raise ActionInputParseError(action)
-        # return eval(match.group(1).strip())
         return match.group().strip()
     elif action == ACTION.ANSWER_SUBMITTER.value:
         pattern = r"Action Input:(.+)"
@@ -204,16 +198,6 @@ def num_tokens_from_messages(msgs, model: MODEL_TYPE):
 
 
 def count_tokens_openai_chat_models(messages, encoding) -> int:
-    r"""Counts the number of tokens required to generate an OpenAI chat based
-    on a given list of messages.
-
-    Args:
-        messages: The list of messages.
-        encoding: The encoding method to use.
-
-    Returns:
-        int: The number of tokens required.
-    """
     num_tokens = 0
     for message in messages:
         # message follows <im_start>{role/name}\n{content}<im_end>\n

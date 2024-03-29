@@ -97,7 +97,6 @@ class SheetSelector(ActionExecutor):
         return tb
 
     def update_table(self, table_name: str, tb_new: pd.DataFrame):
-        # TODO: 每当操作后更新了表格，也要同步更新数据库中对应的表格
         if self.add_row_number:  # add row number column
             row_number_col = "row number" if self.lower_case else "Row Number"
             tb_new.insert(0, row_number_col, range(1, 1 + len(tb_new)))

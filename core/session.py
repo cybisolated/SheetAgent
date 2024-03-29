@@ -368,17 +368,6 @@ class Session:
         key_info = None
         if not skip_retrevial and sql_res is not None:
             sql_res = str(sql_res) if not isinstance(sql_res, str) else sql_res
-            # sql_res_lines = sql_res.splitlines()
-            # len_sql_res = len(sql_res_lines) - 2
-            # if len_sql_res > 5:
-            #     sql_res = "\n".join(
-            #         sql_res_lines[: 5 + 1]
-            #         + [
-            #             "  ..."
-            #             + " (The SQL execution result is too large to display completely. Only first 5 lines are shown. You should deduce the complete information from what is provided by yourself.)"
-            #         ]
-            #         + sql_res_lines[-1:]
-            #     )
             key_info = f"{sql}\n{sql_res}"
         return key_info
 
