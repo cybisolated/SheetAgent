@@ -16,12 +16,13 @@ We have provided sevral example spreadsheets in `example_sheets`. You can try yo
 
 The `milvus.yaml` file should be completed if you want to use the Retriever module. Besides, Milvus should be installed first (refer to https://github.com/milvus-io/milvus for detailed instructions).
 
-## SheetRM-10 Dataset
-We release 10 representative tasks in our proposed SheetRM dataset, which is called SheetRM-10. We run the vision-enabled SheetAgent experiment using SheetRM-10. For details, please refer to Appendix F.2 in the paper.
+## SheetRM Dataset
+We have released approximately 60% of the data from the proposed SheetRM dataset (including 25 spreadsheets and 180 tasks).
 
-In our commitment to advancing open research, we are pleased to announce the release of a portion of our dataset. We understand the importance of data accessibility and are diligently working to organize and maintain the remaining dataset. As soon as it is ready, we will make it publicly available. We strive to ensure the highest quality and usability of our data.
+As part of our commitment to open research, we are excited to announce the release of a portion of our dataset. We understand the importance of data accessibility and are actively working on organizing and maintaining the remaining dataset to avoid further privacy or other issues. Once ready, we will make it available to the public. We strive to ensure the highest quality and usability of our data.
 
-The SheetRM-10 dataset is stored in `./sheetrm_10`, where `tasks.xlsx` records the metadata of the 10 tasks, and the `spreadsheets` folder stores the spreadsheet files. You can try these challenging tasks following the guidence of "Quick Start".
+These data are stored in `./sheetrm`, with `tasks.xlsx` containing the metadata for the 180 tasks. The spreadsheets are stored in the `spreadsheets` directory. You can try these challenging tasks under the guidance of "Quick Start".
+
 
 ## Other Datasets
 Our experiments involves other datasets, including:
