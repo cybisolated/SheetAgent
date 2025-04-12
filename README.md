@@ -50,7 +50,7 @@ If you use our code or dataset, please cite our paper:
 
 ```bibtex
 @article{chen2024sheetagent,
-  title={***SheetAgent: Towards A Generalist Agent for Spreadsheet Reasoning and Manipulation via Large Language Models***},
+  title={SheetAgent: Towards A Generalist Agent for Spreadsheet Reasoning and Manipulation via Large Language Models},
   author={Chen, Yibin and Yuan, Yifu and Zhang, Zeyu and Zheng, Yan and Liu, Jinyi and Ni, Fei and Hao, Jianye and Mao, Hangyu and Zhang, Fuzheng},
   journal={arXiv preprint arXiv:2403.03636},
   year={2024}
